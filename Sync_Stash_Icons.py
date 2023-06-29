@@ -18,7 +18,7 @@ plex_library_name = 'Websites'                      # The name of the Plex libra
 stash_instance = 'http://192.168.1.71:9999'         # Basic connection for Stash here.  Not authentication is coded in this script, either user/pass or API
 
 file_path = '.\\output\\'                           # The subdirectory to output created images to, must be a valid directory.  Remember that for Windows you must use double slashes
-create_text_posters = False                         # If there is not an image in Stash for a Tag/Site, should a text based poster be generated
+create_text_posters = True                          # If there is not an image in Stash for a Tag/Site, should a text based poster be generated
 attempt_to_convert_svg = False                      # If an SVG file is used in Stash, should conversion be attempted?  Be warned, results are usually not great
 
 stash_tags_query = '{allTags{id name description image_path}}'      #Do Not Modify
