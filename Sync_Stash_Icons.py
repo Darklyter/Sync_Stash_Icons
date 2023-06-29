@@ -20,6 +20,8 @@ stash_instance = 'http://192.168.1.71:9999'         # Basic connection for Stash
 file_path = '.\\output\\'                           # The subdirectory to output created images to, must be a valid directory.  Remember that for Windows you must use double slashes
 create_text_posters = True                          # If there is not an image in Stash for a Tag/Site, should a text based poster be generated
 attempt_to_convert_svg = False                      # If an SVG file is used in Stash, should conversion be attempted?  Be warned, results are usually not great
+site_title_header = 'Site:'                         # To differentiate Sites from Tags it's helpful to have something to set them apart.  I use Site:, so my collection might show as "Site: Nubile Films"
+
 
 stash_tags_query = '{allTags{id name description image_path}}'      #Do Not Modify
 stash_studios_query = '{allStudios{id name details image_path}}'    #Do not modify
@@ -160,8 +162,9 @@ if __name__ == "__main__":
         # ~ if count < 10:
         update_result = False
         title = collection.title.lower()
-        if "site:" in collection.title.lower():
-            title = title.replace("site:", "").strip()
+        site_title_header = site_title_header.lower()
+        if site_title_header in collection.title:
+            title = title.replace(site_title_header, "").strip()
             title = re.sub(r'[^a-zA-Z0-9-+]', '', title)
             update_result = updatePoster(title, studio_list, "allStudios", collection, "Site")
         else:
