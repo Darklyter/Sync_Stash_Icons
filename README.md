@@ -31,3 +31,13 @@ it might not look great
 4) Stash authentication is not currently coded or supported.  This includes both user/pass as well as API authentication
 
    Questions or comments you can reach me on the TPDB Discord at https://discord.gg/rj9ATCVj or the Stash discord at https://discord.gg/rj9ATCVj
+
+
+
+**Screenshots:**
+
+*General Tags, With and Without Stash Images:*
+![Alt text](resources/Tags.jpg "Tags")
+
+*Site Logos:*
+![Alt text](resources/Sites.jpg "Sites")
